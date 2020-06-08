@@ -41,7 +41,7 @@ The structure of the file is as follows:
 ```xml
 <FileList>
   <File Reference = "your_package_file">
-    <ToolboxItems VSCategory="vs_category" BlendCategory="blend_category">
+    <ToolboxItems UIFramework="WPF" VSCategory="vs_category" BlendCategory="blend_category">
       <Item Type="type_full_name_1" />
 
       <!-- Any number of additional Items -->
@@ -55,6 +55,7 @@ The structure of the file is as follows:
 where:
 
 - *your_package_file*: the name of your control file, such as `ManagedPackage.winmd` ("ManagedPackage" is an arbitrary named used for this example and has no other meaning).
+- *UIFramework*: The name of the Framework, such as 'WPF', note that UIFramework attribute is required on ToolboxItems nodes on Visual Studio 16.7 Preview 3 or above
 - *vs_category*: The label for the group in which the control should appear in the Visual Studio designer’s toolbox. A `VSCategory` is necessary for the control to appear in the toolbox.
 - *blend_category*: The label for the group in which the control should appear in the Blend designer’s Assets pane. A `BlendCategory` is necessary for the control to appear in Assets.
 - *type_full_name_n*: The fully-qualified name for each control, including the namespace, such as `ManagedPackage.MyCustomControl`. Note that the dot format is used for both managed and native types.
